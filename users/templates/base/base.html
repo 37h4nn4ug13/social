@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Hello World
+        </title>
+        
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'base.css' %}">
+        <script src="{% static 'base.js' %}" rel="script" crossorigin="anonymous" type="text/javascript"></script>
+
+    </head>
+    <body>
+        <a style="margin: 20px;" href="{% url 'posts-list' %}">Posts</a>
+        <a style="margin: 20px;" href="{% url 'profile' %}">Profile</a>
+        <a style="margin: 20px;" href="{% url 'register' %}">Register</a>
+        <a style="margin: 20px;" href="{% url 'login' %}">Login</a>
+        <div class="mt-40">
+        {% block content %}
+
+        {% endblock content %}
+        </div>
+    </body>
+</html>

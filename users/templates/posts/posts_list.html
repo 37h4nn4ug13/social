@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="outline-local">
+        <h1>This is the post page</h1>
+
+        <a class="btn btn-info" href="{% url 'new-post' %}">New Message</a>
+
+        {% for post in object_list %}
+            <div class="pst-crd">
+                <h2>{{ post.author }}</h2>
+                {% if post.img %}
+
+                    <img src="{{ post.img.url }}" alt="first-img" class="first-img">
+                {% endif %}
+                {% if post.video %}
+                    <div style="margin: 10px auto;">
+                        <video autoplay="autoplay" controls="controls" preload="metadata" class="first-img" loop="loop">
+                            <source src="{{ post.video.url }}" type="video/mp4"/>
+                        </video>
+                    </div>
+                {% endif %}
+
+
+                <p>{{ post.message }}</p>
+                <a class="btm-btn like-btn" href="#">like</a>
+                <a class="btm-btn author-btn" href="#">{{ post.author }}</a>
+                <div class="bar"></div>
+            </div>
+
+
+        {% empty %}
+            <div class="message-box-local">
+                <p>No posts yet.</p>
+            </div>
+        {% endfor %}
+
+    </div>
+
+{% endblock content %}

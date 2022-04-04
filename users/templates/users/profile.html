@@ -24,7 +24,9 @@
 
 
                 <p>{{ post.message }}</p>
-                <a class="btm-btn like-btn" href="#">like</a>
+                <a class="btm-btn like-btn" href="#">
+                    like ({% for like in post.likes.all %}{% if forloop.last %}{{ forloop.counter }}{% endif %}{% empty %}0{% endfor %})
+                </a>
                 <a class="btm-btn author-btn" href="#">{{ post.author }}</a>
                 <div class="bar"></div>
             </div>

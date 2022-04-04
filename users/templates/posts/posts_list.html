@@ -6,7 +6,7 @@
 
         <a class="btn btn-info" href="{% url 'new-post' %}">New Message</a>
 
-        {% for post in object_list %}
+        {% for post in posts %}
             <div class="pst-crd">
                 <h2>{{ post.author }}</h2>
                 {% if post.img %}
@@ -23,8 +23,27 @@
 
 
                 <p>{{ post.message }}</p>
-                <a class="btm-btn like-btn" href="#">like</a>
-                <a class="btm-btn author-btn" href="#">{{ post.author }}</a>
+                <button class="btn" type="submit">
+                    like ({% for like in post.likes.all %}{% if forloop.last %}{{ forloop.counter }}{% endif %}{% empty %}0{% endfor %})
+                </button>
+                <a class="btm-btn author-btn" href="#">
+                    comment (
+                    {% for comment in comments %}
+                        {% if comment.post.pk == post.pk %}
+                            {% if forloop.last %}{{ forloop.counter }}{% endif %}
+                        {% endif %}
+                    {% empty %}0
+                    {% endfor %}
+                )
+                </a>
+
+            {% for comment in comments %}
+                {% if comment.post.pk == post.pk %}
+                            <p>{{ comment.message }} -- {{ comment.author }}</p>
+                        {% endif %}
+
+
+                {% endfor %}
                 <div class="bar"></div>
             </div>
 

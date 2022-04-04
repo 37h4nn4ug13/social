@@ -48,7 +48,8 @@ class PersonalProfile(DetailView):
 
 
 def login_view(request):
+    form = UserLoginForm(request.POST)
     context = {
-        'form': UserLoginForm()
+        'form': form,
     }
     return render(request, 'users/login.html', context)

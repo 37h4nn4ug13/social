@@ -127,3 +127,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
 MEDIA_URL = '/media/'
+
+LOGIN_REDIRECT_URL = 'home'

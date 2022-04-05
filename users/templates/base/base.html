@@ -17,9 +17,11 @@
         <a style="margin: 20px;" href="{% url 'register' %}">Register</a>
         <a style="margin: 20px;" href="{% url 'login' %}">Login</a>
         <div class="mt-40">
+        <div class="container">
         {% block content %}
 
         {% endblock content %}
+        </div>
         </div>
     </body>
 </html>

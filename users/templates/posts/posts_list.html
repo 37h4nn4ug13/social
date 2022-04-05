@@ -1,7 +1,6 @@
 {% extends 'base/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="outline-local">
         <h1>This is the post page</h1>
 
         <a class="btn btn-info" href="{% url 'new-post' %}">New Message</a>
@@ -54,6 +53,6 @@
             </div>
         {% endfor %}
 
-    </div>
+
 
 {% endblock content %}

@@ -15,8 +15,12 @@
     <header>
         <a style="margin: 20px;" href="{% url 'posts-list' %}">Posts</a>
         <a style="margin: 20px;" href="{% url 'profile' %}">Profile</a>
+        {% if not user.is_authenticated %}
         <a style="margin: 20px;" href="{% url 'register' %}">Register</a>
         <a style="margin: 20px;" href="{% url 'login' %}">Login</a>
+        {% else %}
+        <a style="margin: 20px;" href="{% url 'logout' %}">Logout</a>
+        {% endif %}
     </header>
         <div class="mt-40">
         <div class="container">

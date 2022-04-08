@@ -33,7 +33,7 @@ a {
 }
 header{
     height: 60px;
-    background: linear-gradient(white, grey);
+    background: linear-gradient(45deg, white, grey);
 
 }
 .titletext{

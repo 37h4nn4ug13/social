@@ -183,7 +183,7 @@ input[type=file]::file-selector-button:hover {
   border: 2px solid #00cec9;
 }
 @media (max-width: 600px) {
-    .container {
+    .stuff {
         width: 100%;
         position: absolute;
         padding: 0;
@@ -191,9 +191,7 @@ input[type=file]::file-selector-button:hover {
         margin-left: 0;
 
     }
-    .content {
-        width: 100%;
-    }
+    
     .cards {
         width: 100%;
     }

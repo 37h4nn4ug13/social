@@ -21,7 +21,7 @@ def register(request):
                                     password=form.cleaned_data['password1'])
 
             login(request, new_user)
-            messages.add_message(request, message.SUCCESS, f"Account for { new_user.get_username } has been created🥳")
+            messages.add_message(request, messages.SUCCESS, f"Account for { new_user.get_username } has been created🥳")
             # username = form.cleaned_data.get('username')
 
             # This is definitely not a url that should be used

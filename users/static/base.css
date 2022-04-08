@@ -186,7 +186,13 @@ input[type=file]::file-selector-button:hover {
     .container {
         width: 100%;
         position: absolute;
+        padding: 0;
+        margin-right: 0;
+        margin-left: 0;
 
+    }
+    .content {
+        width: 100%;
     }
     .cards {
         width: 100%;

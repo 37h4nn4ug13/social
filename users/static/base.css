@@ -1,4 +1,4 @@
-/* *{
+*{
     font-family: sans-serif;
 }
 
@@ -115,7 +115,7 @@ header{
     background-color: #dddddd;
     padding: 20px;
     border-radius: 20px;
-    /*border: rgb(255, 136, 0) solid 1px;
+    /*border: rgb(255, 136, 0) solid 1px;*/
     box-shadow: 0 0 5px black;
 }
 .mt-40{
@@ -171,4 +171,4 @@ input[type=file]::file-selector-button {
 input[type=file]::file-selector-button:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
-} */
+} 

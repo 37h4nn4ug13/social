@@ -85,7 +85,6 @@ header{
 }
 .rate{
     height: 100px;
-    width: 200px;
 }
 .inlineblock{
     display: inline-block;
@@ -117,7 +116,6 @@ header{
     padding: 20px;
     border-radius: 20px;
     /*border: rgb(255, 136, 0) solid 1px;*/
-    width: 500px;
     box-shadow: 0 0 5px black;
 }
 .mt-40{
@@ -138,11 +136,9 @@ header{
 }
 .pst-crd {
     background: white;
-    width: 440px;
     padding: 20px;
 }
 .first-img {
-    width: 400px;
     height: auto;
     background: white;
 }
@@ -158,7 +154,6 @@ header{
     padding: 5px;
 }
 .bar {
-    width: 100%;
     height: 3px;
     background: grey;
     margin-top: 30px;

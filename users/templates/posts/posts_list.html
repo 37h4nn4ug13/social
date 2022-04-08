@@ -7,7 +7,7 @@
 
         {% for post in posts %}
             <div class="pst-crd">
-                <h2>{{ post.author }}<span><img src="{{ post.author.profile.image.url }}" style="width: 20px; border-radius: 20px;"></span></h2>
+                <h2>{{ post.author }}<span><img src="{{ post.author.profile.image.url }}" style="width: 40px; border-radius: 40px;"></span></h2>
                 {% if post.img %}
 
                     <img src="{{ post.img.url }}" alt="first-img" class="first-img">

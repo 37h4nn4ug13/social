@@ -177,20 +177,3 @@ input[type=file]::file-selector-button:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }
-@media (max-width: 600px) {
-    .stuff {
-        width: 100%;
-        position: absolute;
-        padding: 0;
-        margin-right: 0;
-        margin-left: 0;
-
-    }
-    
-    .cards {
-        width: 100%;
-    }
-    body {
-        width: 100%;
-    }
-}

@@ -64,8 +64,6 @@ header{
 .card{
     background-color: whitesmoke;
     border: 4px solid #203040; 
-    width: 300px;
-    height: 300px;
     display: inline-block;
     margin: auto;
     margin-top: 5px;
@@ -79,9 +77,6 @@ header{
     margin-left: auto;
 }
 .cardimg{
-    width: 98px;
-    height: 98px;
-    
 }
 .cardtop{
     width: 100%;

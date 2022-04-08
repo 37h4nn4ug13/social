@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import DetailView, ListView
+from django.contrib import messages
 
 from .forms import UserRegisterForm, UserLoginForm
 from .models import Profile
@@ -20,7 +21,7 @@ def register(request):
                                     password=form.cleaned_data['password1'])
 
             login(request, new_user)
-            # this needs to be used to send a message that the user was successfully registered
+            messages.add_message(request, message.SUCCESS, f"Account for { new_user.get_username } has been created🥳")
             # username = form.cleaned_data.get('username')
 
             # This is definitely not a url that should be used
@@ -48,9 +49,11 @@ class PersonalProfile(DetailView):
 
 
 def login_view(request):
-    form = UserLoginForm(request.POST)
+    form = UserLoginForm()
+    if (request.method == "POST"):
+        form = UserLoginForm(request.POST)
+    
     context = {
         'form': form,
     }
     return render(request, 'users/login.html', context)
-

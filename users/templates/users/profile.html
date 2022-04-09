@@ -3,14 +3,25 @@
 
     <div class="outline-local">
 
-        <img src="{{ user.profile.image.url }}" alt="{{ profile.username }}" style="width: 200px; border-radius: 200px;">
-        <h2>{{ profile.username }}</h2>
-        <h3>{{ profile.email }}</h3>
+        <img src="{{ user.profile.image.url }}" alt="{{ user.username }}" style="width: 200px; border-radius: 200px;">
+        <h2>{{ user.username }}</h2>
+        <h3>{{ user.email }}</h3>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ u_form }}
+            {{ p_form }}
+            <input type="submit">
+        </form>
     </div>
     {% for post in posts %}
         {% if profile.pk == post.author.pk %}
             <div class="pst-crd">
-                <h2>{{ post.author }}</h2>
+                <h2>
+                    {{ post.author.first_name }} {{ post.author.last_name }} 
+                    <span>
+                        <img src="{{ post.author.profile.image.url }}" alt="#" style="width: 30px; border-radius: 30px;">
+                    </span>
+                </h2>
                 {% if post.img %}
 
                     <img src="{{ post.img.url }}" alt="first-img" class="first-img">

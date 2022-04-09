@@ -22,7 +22,11 @@
         <a style="margin: 20px;" href="{% url 'login' %}">Login</a>
         {% else %}
         <a style="margin: 20px;" href="{% url 'logout' %}">Logout</a>
+        {% if user.is_staff %}
+        <a style="margin: 20px;" href="/admin">Admin</a>
         {% endif %}
+        {% endif %}
+        
     </div>
     </header>
         <div class="mt-40">

@@ -6,6 +6,11 @@
         <img src="{{ user.profile.image.url }}" alt="{{ profile.username }}" style="width: 200px; border-radius: 200px;">
         <h2>{{ profile.username }}</h2>
         <h3>{{ profile.email }}</h3>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit">
+        </form>
     </div>
     {% for post in posts %}
         {% if profile.pk == post.author.pk %}

@@ -7,7 +7,8 @@ from django.views.generic.edit import FormMixin
 from django.contrib import messages
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
-
+from io import StringIO, BytesIO
+from PIL import Image
 
 from .forms import ProfileUpdateForm, UserRegisterForm, UserLoginForm, UserUpdateForm, ProfileUpdateForm
 from .models import Profile

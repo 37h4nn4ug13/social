@@ -177,3 +177,9 @@ input[type=file]::file-selector-button:hover {
     background: white;
     color: black;
 }
+
+.nav-links {
+    margin: 20px;
+    font-size: large;
+    color: greenyellow;
+}

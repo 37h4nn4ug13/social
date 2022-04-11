@@ -20,7 +20,7 @@ class Profile(models.Model):
         #return "user number " 
 
     def save(self, *args, **kwargs):
-        super(Profile, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
         width = 300
         img = Image.open(self.image.path)
 
